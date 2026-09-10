@@ -1,45 +1,55 @@
-# Logs
-logs
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---- 前端依赖目录 ----
+# React/Vite 方案已从仓库移除，此目录仅为防止误提交而忽略
+node_modules/
+
+# ---- 应用运行时产物 ----
+# 笔记数据（含个人笔记正文，禁止入库）
+notes_data/
+crash.log
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+logs/
 
-node_modules
-dist
-dist-ssr
-*.local
+# WebView2 用户数据目录（早期 WebView 方案的残留目录，PySide6 版不使用）
+EBWebView/
 
-# Editor directories and files
+# ---- Windows ----
+Thumbs.db
+Desktop.ini
+*.lnk
+*.url
+
+# ---- 编辑器 / IDE ----
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
+*.swp
+*.swo
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
 
-# Python
-.venv/
-venv/
-env/
-__pycache__/
-*.py[cod]
-*.egg-info/
-.pytest_cache/
-build/
-
-# 应用运行时产物 / 本地数据（含私人笔记，禁止入库）
-notes_data/
-crash.log
-EBWebView/
-*.lnk
-
-# 密钥
+# ---- 密钥 ----
 .env
 .env.*
 !.env.example

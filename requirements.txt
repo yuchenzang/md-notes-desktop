@@ -1,0 +1,28 @@
+# 煜辰的 Markdown 笔记 —— 运行依赖
+#
+# 开发环境：Windows + Python 3.13（实测 3.13.14），Python 3.10+ 理论可用。
+#
+# 安装：
+#   python -m venv .venv
+#   .venv\Scripts\python.exe -m pip install -r requirements.txt
+#
+# 注意：run_desktop.cmd 与 make_lnk.py 固定引用 .venv\Scripts\pythonw.exe，
+#       虚拟环境请建在项目根目录并命名为 .venv，否则快捷方式会启动失败。
+
+# GUI 框架：原生 Qt Widgets，不依赖任何浏览器内核
+PySide6==6.11.1
+
+# Markdown 渲染（编辑区右侧实时预览）
+Markdown==3.10.3
+
+# 导出 PDF
+reportlab==5.0.0
+
+# 导入 / 导出 Word（.docx）
+python-docx==1.2.0
+
+# 导入 PDF（纯 Python，无需外部依赖）
+pdfminer.six==20260107
+
+# 仅 make_icon.py 需要：从 icon_source.png 生成 app_icon.ico
+pillow==12.3.0
